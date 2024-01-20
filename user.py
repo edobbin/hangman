@@ -1,4 +1,5 @@
 class User:
+    
     def __init__(self):
       self.wrong = 0
       self.letters = ['']
@@ -13,5 +14,7 @@ class User:
             return False
         
     def getWrong(self):
-        return self.wrong
+        return int(self.wrong)
     
+    def isWrong(self):
+        self.wrong+=1

@@ -27,7 +27,21 @@ class hangman:
                 
     def hangman(self):
         self.printWord()
-        # while self.user.wrong < 6:
+        while self.user.wrong < 6:
+            
+            print("Pick a letter: ")
+            x = input()
+            temp = self.user.checkLetter(x)
+            if x is True:
+                continue
+            else:
+                if self.word.find(x) !=-1:
+                    self.printWord()
+                else:
+                    self.user.isWrong()
+                    chance = 6-self.user.getWrong()
+                    print("You guessed the wrond letter, try again\nYou have "+str(chance)+ " chances left.")
+            
             
         
     
